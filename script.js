@@ -18,6 +18,8 @@ function myFunction() {
     }
   }
 
+
+
 //creating a square and append in the container
 const container = document.querySelector('.container');
 
@@ -43,16 +45,24 @@ for (let i=1;i<=finalCanva;i++){
     square.classList.add('columnitem');
     row.appendChild(square);
 
+    const randomColors = document.querySelector('.randomcolors');
+    randomColors.addEventListener('click', () => {
+
     square.addEventListener('mouseover', () => {
-        square.classList.add('on');
-        // square.style.background = 'blue';
+        let randomColor='#'+ Math.floor(Math.random()*16777215).toString(16);
+        square.style.background = randomColor;
+    });
       });
 
+    const oneColor = document.querySelector('.onecolor');
+    oneColor.addEventListener('click', () => {
+
+    square.addEventListener('mouseover', () => {
+    square.style.background = 'black';
+    // square.style.background = 'Math.floor(Math.random()*16777215).toString(16)';
+      });
+    })
     
 
 }};
 
-
-
-
-console.log (getCanva);

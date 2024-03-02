@@ -3,17 +3,18 @@ body{
 }
 /* Dropdown Button */
 .dropbtn {
-    background-color: #3498DB;
+    background-color: #73c0f3;
     color: white;
-    padding: 16px;
+    padding: 20px;
     font-size: 16px;
     border: none;
     cursor: pointer;
+    border-radius: 3px;
   }
   
   /* Dropdown button on hover & focus */
   .dropbtn:hover, .dropbtn:focus {
-    background-color: #2980B9;
+    background-color: #44a8eb;
   }
   
   /* The container <div> - needed to position the dropdown content */
@@ -26,7 +27,7 @@ body{
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: #8ec4e8;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -35,14 +36,14 @@ body{
   
   /* Links inside the dropdown */
   .dropdown-content a {
-    color: black;
+    color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
   }
   
   /* Change color of dropdown links on hover */
-  .dropdown-content a:hover {background-color: #ddd;}
+  .dropdown-content a:hover {background-color: #5d8cab;}
   
   /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
   .show {display:block;}
@@ -77,4 +78,8 @@ div.container {
 
 .on{
     background: aquamarine;
+}
+
+.onecolor{
+    color: #2980B9;
 }
