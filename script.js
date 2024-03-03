@@ -8,16 +8,15 @@ function myFunction() {
   window.onclick = function(event) {
     if (!event.target.matches('.dropbtn')) {
       var dropdowns = document.getElementsByClassName("dropdown-content");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
+      var k;
+      for (k = 0; k < dropdowns.length; k++) {
+        var openDropdown = dropdowns[k];
         if (openDropdown.classList.contains('show')) {
           openDropdown.classList.remove('show');
         }
       }
     }
   }
-
 
 
 //creating a square and append in the container
@@ -45,24 +44,44 @@ for (let i=1;i<=finalCanva;i++){
     square.classList.add('columnitem');
     row.appendChild(square);
 
+// setting radom colors for the pen
     const randomColors = document.querySelector('.randomcolors');
     randomColors.addEventListener('click', () => {
 
     square.addEventListener('mouseover', () => {
         let randomColor='#'+ Math.floor(Math.random()*16777215).toString(16);
         square.style.background = randomColor;
+        square.style.opacity = 1;
     });
       });
 
+      // setting one color for the pen
     const oneColor = document.querySelector('.onecolor');
     oneColor.addEventListener('click', () => {
 
     square.addEventListener('mouseover', () => {
-    square.style.background = 'black';
-    // square.style.background = 'Math.floor(Math.random()*16777215).toString(16)';
+      square.style.background = 'black';
+      // square.classList.add('on');
+
       });
     })
-    
+
+// setting progressive darkening for the pen
+const proDark = document.querySelector('.prodark');
+proDark.addEventListener('click', () => {
+
+      let opa=0;
+      function addOpacity(){
+        return opa+=0.2;
+      };
+
+    square.addEventListener('mouseover', () => {
+      square.style.background = 'black';
+      // square.classList.add('onecolor');
+      square.style.opacity = addOpacity();
+      
+      });
+    })
 
 }};
 

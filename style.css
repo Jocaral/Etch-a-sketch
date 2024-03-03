@@ -77,9 +77,13 @@ div.container {
 }
 
 .on{
-    background: aquamarine;
+    background: rgb(71, 255, 194);
+  
 }
+/* .on:hover {
+  opacity: 0.3;
+} */
 
 .onecolor{
-    color: #2980B9;
+    background: #2980B9;
 }
