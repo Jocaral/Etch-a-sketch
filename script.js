@@ -62,7 +62,7 @@ for (let i=1;i<=finalCanva;i++){
     square.addEventListener('mouseover', () => {
       square.style.background = 'black';
       // square.classList.add('on');
-
+      square.style.opacity = 1;
       });
     })
 
